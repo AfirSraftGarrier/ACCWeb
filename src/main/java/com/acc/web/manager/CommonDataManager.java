@@ -17,7 +17,25 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * 
  */
-package com.acc.web.frame.service.base;
+package com.acc.web.manager;
 
-public interface ICommonService<T> extends IBaseService<T, Long, Boolean> {
+import org.springframework.stereotype.Component;
+
+@Component
+public class CommonDataManager {
+	private final Boolean defaultYes;
+	private final Boolean defaultNo;
+
+	public Boolean getDefaultYes() {
+		return defaultYes;
+	}
+
+	public Boolean getDefaultNo() {
+		return defaultNo;
+	}
+
+	public CommonDataManager() {
+		this.defaultYes = true;
+		this.defaultNo = false;
+	}
 }

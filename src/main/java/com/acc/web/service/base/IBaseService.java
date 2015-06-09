@@ -17,25 +17,26 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * 
  */
-package com.acc.web.frame.manager;
+package com.acc.web.service.base;
 
-import org.springframework.stereotype.Component;
+import java.util.List;
 
-@Component
-public class CommonDataManager {
-	private final Boolean defaultYes;
-	private final Boolean defaultNo;
+public interface IBaseService<T, K, B> {
+	public B add(T... toAdds);
 
-	public Boolean getDefaultYes() {
-		return defaultYes;
-	}
+	public B delete(K... ids);
 
-	public Boolean getDefaultNo() {
-		return defaultNo;
-	}
+	public B deleteAll();
 
-	public CommonDataManager() {
-		this.defaultYes = true;
-		this.defaultNo = false;
-	}
+	public T get(K id);
+
+	public List<T> get(K... ids);
+
+	public List<T> getAll();
+
+	public List<T> getMatching(List<T> ts);
+
+	// public T getMatching(T t);
+
+	public B deleteMatching(List<T> ts);
 }

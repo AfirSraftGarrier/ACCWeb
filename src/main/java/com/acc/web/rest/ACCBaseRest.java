@@ -17,14 +17,14 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * 
  */
-package com.acc.web.frame.rest;
+package com.acc.web.rest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
-import com.acc.web.frame.manager.HttpDataManager;
-import com.acc.web.frame.manager.JsonManager;
-import com.acc.web.frame.manager.LogManager;
+import com.acc.web.manager.HttpDataManager;
+import com.acc.web.manager.JsonManager;
+import com.acc.web.manager.LogManager;
 
 public class ACCBaseRest extends SpringBeanAutowiringSupport {
 	@Autowired

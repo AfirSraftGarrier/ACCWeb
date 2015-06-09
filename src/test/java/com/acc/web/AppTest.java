@@ -17,26 +17,22 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * 
  */
-package com.acc.web.frame.service.base;
+package com.acc.web;
 
-import java.util.List;
+import junit.framework.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
 
-public interface IBaseService<T, K, B> {
-	public B add(T... toAdds);
+public class AppTest extends TestCase {
+	public AppTest(String testName) {
+		super(testName);
+	}
 
-	public B delete(K... ids);
+	public static Test suite() {
+		return new TestSuite(AppTest.class);
+	}
 
-	public B deleteAll();
-
-	public T get(K id);
-
-	public List<T> get(K... ids);
-
-	public List<T> getAll();
-
-	public List<T> getMatching(List<T> ts);
-
-	// public T getMatching(T t);
-
-	public B deleteMatching(List<T> ts);
+	public void testApp() {
+		assertTrue(true);
+	}
 }
